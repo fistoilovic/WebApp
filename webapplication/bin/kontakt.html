@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+ padding: 0;
+}
+   
+.nav ul a {
+ text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;text-align: center;}
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+<header>
+  <h1>Body Mass Index</h1>
+</header>
+<nav class="nav">
+<ul>
+  <li><a href="/">Pocetna</a></li>
+  <li><a href="/bmi">Izracunaj BMI!!!</a></li>
+  <li><a href="/registracija">Registracija</a></li>
+  <li><a href="/kontakt">Kontakt</a></li>
+</ul>
+</nav>
+<article class="article">
+  <h1>Kontakt</h1>
+  <p>Za vise informacija ili ukoliko imate neko pitanje u vezi sa zdravljem kontaktirajte nas.</p>
+  <p>Bicemo Vam zahvalni jer Vasim kritikama i pohvalama cinite da Vam bolje izlazimo u susret sto se zdravlja tice.</p>
+  <p><h2><strong>POWER GYM plus </strong> fitness i wellbeing centre</h2></p>
+  <p>Steve Todorovica 32, Banovo Brdo, 
+  11030 Beograd, Srbija</p>
+  <p><strong>Telefoni na koje nas mozete dobiti</strong></p>
+  <p>T  + 381 11 35 459 35</p>
+﻿  <p>F  + 381 11 35 411 35</p>
+  <p>M + 381 65 35 459 35</p>
+  <p><strong>Radno vreme</strong></p>
+  <p>Ponedeljak - Subota / 07.00 - 22.30 </p>
+  <p>Nedelja / 10.00 - 17.00</p>
+  <p><strong>Mail, Facebook, Instagram</strong></p>
+  <p>office@powergym.co.rs</p>
+  <p>facebook.com/powergym</p>
+  <p>facebook.com/powergymplus</p>
+  <p>powergym_plus</p>
+</article>
+</div>
+<footer>Copyright Filip</footer>
+</body>
+</html>

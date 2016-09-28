@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+ padding: 0;
+}
+   
+.nav ul a {
+ text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;text-align: center;}
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+<header>
+  <h1>Dobrodosli na web aplikaciju BMI</h1>
+</header>
+<nav class="nav">
+<ul>
+  <li><a href="/">Pocetna</a></li>
+  <li><a href="/bmi">Izracunaj BMI!!!</a></li>
+  <li><a href="/registracija">Registracija</a></li>
+  <li><a href="/kontakt">Kontakt</a></li>
+</ul>
+</nav>
+<article id="id" class="article">
+  <h1>Body Mass Index</h1>
+  <p></p>
+  <p><strong>Unesite svoje podatke i krenite u na put ka boljem zdravlju!</strong></p>
+
+<form id="link" method="GET" action="/izracunaj">
+	Visina (cm): <input type="text" name="visina" value=""></input><br></br>
+    Tezina (kg): <input type="text" name="tezina" value=""></input><br></br>
+  <input type="submit" value="Izracunaj!!!"></input>
+  <h2></h2>
+</form>
+</article>
+
+</div>
+<footer>Copyright Filip</footer>
+</body>
+</html>

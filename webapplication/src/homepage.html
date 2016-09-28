@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<style>
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+ padding: 0;
+}
+   
+.nav ul a {
+ text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;text-align: center;}
+}
+</style>
+</head>
+<body>
+<div class="flex-container">
+<header>
+  <h1>Dobrodosli na web aplikaciju BMI</h1>
+</header>
+<nav class="nav">
+<ul>
+  <li><a href="/">Pocetna</a></li>
+  <li><a href="/bmi">Izmeri BMI!!!</a></li>
+  <li><a href="/registracija">Registracija</a></li>
+  <li><a href="/kontakt">Kontakt</a></li>
+</ul>
+</nav>
+<article class="article">
+  <h1>Dobrodosli</h1>
+  <p>BMI je web aplikacija koja vam nudi da izmerite svoj Body Mass Index. </p>
+  <p>Na brzi i lak nacin mozete da proverite u kakvoj ste formi.</p>
+  <p>Pruzimo Nama ono sto nam je potrebno, a to je zdravlje.</p>
+  <p><strong> Prvi korak </strong> je merenje BMI da bi imali uvid u stanje organizma. 
+  Rezultat merenja neka bude podsticaj ka sledecim koracima kao sto su 
+  <strong>redovna fizicka aktivnost, pravilna ishrana i redovan san</strong>
+  sve dotle dok ne postanu dnevna rutina.   </p><br></br>
+  <p><h3>Poznate izreke o fizickoj aktivnosti: </h3></p>
+  <p><strong>U zdravom telu, zdrav duh</strong></p>
+</article>
+</div>
+<footer>Copyright Filip</footer>
+</body>
+</html>
