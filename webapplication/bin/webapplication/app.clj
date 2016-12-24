@@ -27,7 +27,9 @@
 (defn izracunaj
   [request]  
       (do (def tekst (formula (:visina (:params request)) (:tezina (:params request)))) 
-	              #_ (:visina (:params request)) STRING VREDNOST
+	              #_ (:visina (:params request)) STRING VREDNOST ZBOG TOGA NE MOZE DA IZVRSI FUNCIJA FORMULA 
+	      				             I DOLAZI DO GRESKE, PO MOM MISLJENJU. KAKO DA IZVRSIM KONVERZIJU STRINGA U 
+	      					     DOUBLE?
 		      (response/redirect "/bmi")))
 
 (en/deftemplate homepage 
