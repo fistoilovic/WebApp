@@ -7,6 +7,11 @@
 
 (defonce korisnici (atom {}))
 
+(defn formula
+  [tezina visina]
+  (def resenje (/ tezina (/ (* visina visina) 10000.0)))
+   resenje)
+
 (defn registar
   [request]
   (do (if (@korisnici (:kime (:params request)))
@@ -21,8 +26,8 @@
 
 (defn izracunaj
   [request]  
-      (do (def tekst (str "Konverzija broja Double u String " )
-             #_(str (formula (:visina (:params request)) (:tezina (:params request)))))
+      (do (def tekst (formula (:visina (:params request)) (:tezina (:params request)))) 
+	              #_ (:visina (:params request)) STRING VREDNOST
 		      (response/redirect "/bmi")))
 
 (en/deftemplate homepage 
@@ -50,11 +55,6 @@
   (en/xml-resource "registracija.html")
   [request]
  [:#id :h2] (en/content (str text)))
-
-
-(defn formula
-  [tezina visina]
-  (/ tezina (/ (* visina visina) 10000.0)))
     
 (defroutes app*
   (GET "/" request (homepage request))
