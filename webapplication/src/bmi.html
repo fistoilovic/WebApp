@@ -20,7 +20,7 @@
     text-align: left;
 }
 
-header {background: black;color:white;}
+header {background: #111;color:white;}
 footer {background: #aaa;color:white;}
 .nav {background:#eee;}
 
@@ -56,13 +56,38 @@ footer {background: #aaa;color:white;}
 <article id="id" class="article">
   <h1>Body Mass Index</h1>
   <p></p>
-  <p><strong>Unesite svoje podatke i krenite u na put ka boljem zdravlju!</strong></p>
+  <p><strong>Unesite svoje podatke i krenite na put ka boljem zdravlju!</strong></p>
 
 <form id="link" method="GET" action="/izracunaj">
 	Visina (cm): <input type="text" name="visina" value=""></input><br></br>
     Tezina (kg): <input type="text" name="tezina" value=""></input><br></br>
   <input type="submit" value="Izracunaj!!!"></input>
   <h2></h2>
+  <table id="table">
+  <tr>
+    <th colspan="2"><p id="p1">A Sada Malo Statistike</p></th>
+    <th><p id="id2"></p></th>
+    <th colspan="2">A Sada Da Vidimo Gde Ste Vi Tu</th>
+  </tr>
+  <tr>
+    <td><p id="p2"></p></td>
+    <td><p id="p3"></p></td>
+    <td></td>
+    <td><p id="pk2"></p></td>
+  </tr>
+  <tr>
+    <td><p id="p4"></p></td>
+    <td><p id="p5"></p></td>
+    <td></td>
+    <td><p id="pk3"></p></td>
+  </tr>
+  <tr>
+    <td><p id="p6"></p></td>
+    <td><p id="p7"></p></td>
+    <td>...................</td>
+    <td><p id="pk4"></p></td>
+  </tr>
+</table>
 </form>
 </article>
 
