@@ -79,7 +79,8 @@
 
 (defn izracunaj
   [request]  
-      (do (def tekstVisina (str  kime  " ,Vasa visina, je za "
+      (do (def tekst (formula request))
+          (def tekstVisina (str  kime  " ,Vasa visina, je za "
                                 (format "%.6s" (razlika (/ ukupnaVisina (provera brojMerenihKorisnika)) visina ))  
                                  " cm "  razlikaMV " od prosecne!"))  
           (def tekstTezina (str  kime  " ,Vasa tezina, je za "
@@ -88,7 +89,6 @@
           (def tekstBMI (str  kime  " ,Vas BMI, je za "
                              (format "%.6s"  (razlika (/ ukupanBMI (provera brojMerenihKorisnika)) rezultat )) 
                               " "  razlikaMV " od prosecnog!"))
-          (def tekst (formula request))
           (def ukupanBMI (+ ukupanBMI (Double. tekst)))
           (def brojMerenihKorisnika (+ brojMerenihKorisnika 1))
           (def ukupnaVisina (+ ukupnaVisina visina))
